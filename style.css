@@ -247,8 +247,6 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    color: var(--text-secondary);
-    font-size: 1.5rem;
 }
 
 /* About Section */
@@ -266,10 +264,11 @@ nav {
 .about-img img {
     width: 100%;
     max-width: 280px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
     display: block;
     margin: 0 auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
     border-radius: 50%;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-light);
