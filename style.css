@@ -266,9 +266,11 @@ nav {
 .about-img img {
     width: 100%;
     max-width: 280px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 50%;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-light);
     transition: var(--transition);
