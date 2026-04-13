@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snehangshu Bhuin — Data Scientist</title>
+    <title>Snehangshu Bhuin — Data Scientist & Data Analyst</title>
+    <meta name="description" content="Data Scientist & Data Analyst specializing in LLM Fine-Tuning, RAG Pipelines, and Deep Learning. M.Sc. Statistics graduate open to full-time roles.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -388,6 +389,42 @@
 
         .info-row i { color: var(--orange); font-size: 0.75rem; width: 14px; }
 
+        /* CURRENTLY WORKING ON */
+        .current-work {
+            margin-top: 2rem;
+        }
+
+        .current-work h4 {
+            font-family: var(--font-mono);
+            font-size: 0.8rem; color: var(--orange);
+            letter-spacing: 0.1em; text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .current-work-list {
+            list-style: none;
+        }
+
+        .current-work-list li {
+            color: var(--muted);
+            font-size: 0.92rem;
+            padding: 0.5rem 0;
+            padding-left: 1.4rem;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .current-work-list li:last-child { border-bottom: none; }
+
+        .current-work-list li::before {
+            content: '✦';
+            position: absolute; left: 0;
+            color: var(--orange); font-size: 0.6rem;
+            top: 0.7rem;
+        }
+
+        .current-work-list li b { color: var(--white); font-weight: 500; }
+
         /* EXPERIENCE */
         #experience {}
 
@@ -569,16 +606,51 @@
             border-radius: 2px;
             color: var(--muted);
             transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .tag img {
+            width: 14px; height: 14px;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: grayscale(30%);
+            transition: filter 0.15s;
         }
 
         .tag:hover { background: var(--orange-dim); border-color: var(--orange); color: var(--white); }
+        .tag:hover img { filter: grayscale(0%) brightness(1.1); }
 
         /* PROJECTS */
         #projects { background: var(--gray); }
 
+        .project-category-label {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--orange);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .project-category-label:first-of-type { margin-top: 0; }
+
+        .project-category-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(232,93,4,0.2);
+        }
+
         .projects-layout {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
         .proj-card {
@@ -651,6 +723,9 @@
         }
 
         .proj-link:hover { color: var(--orange); }
+
+        .proj-link.highlight-link { color: var(--orange); }
+        .proj-link.highlight-link:hover { color: #ff6a1a; }
 
         /* CERTIFICATIONS */
         #certifications {}
@@ -852,14 +927,14 @@
         <div class="hero-grid-lines"></div>
         <div class="hero-inner">
             <div class="hero-left">
-                <div class="hero-label">Available for Opportunities</div>
+                <div class="hero-label">Open to Full-Time Roles</div>
                 <h1 class="hero-name">
                     Snehangshu<span class="line2">Bhuin</span>
                 </h1>
                 <p class="hero-role">$ <span class="typing-text">Data Scientist</span><span class="blink">_</span></p>
                 <p class="hero-desc">
-                    Turning data into decisions. M.Sc. Statistics graduate building RAG & NLP solutions.
-                    Currently analyzing data at Indian Statistical Institute.
+                    Data Scientist / Data Analyst with a passion for LLM Fine-Tuning, RAG Pipelines, and Deep Learning.
+                    M.Sc. in Statistics bridging academic theory and real-world impact.
                 </p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">View Work</a>
@@ -870,7 +945,7 @@
                 <div class="profile-frame">
                     <img src="1763657785701.png" alt="Snehangshu Bhuin">
                     <div class="profile-badge">
-                        <span class="stat">5+</span>
+                        <span class="stat">12+</span>
                         Projects
                     </div>
                 </div>
@@ -889,16 +964,26 @@
             <h2 class="section-title">Who I <em>Am</em></h2>
             <div class="about-layout">
                 <div class="about-bio">
-                    <p>I am a <b>Statistics Postgraduate (M.Sc.)</b> from Visva-Bharati University with a strong foundation in statistical modeling, predictive analytics, and machine learning.</p>
-                    <p>Currently applying my skills as a <b>Data Analyst Intern</b> at the prestigious <b>Indian Statistical Institute (IDEAS-TIH)</b>. My focus areas include NLP, Retrieval-Augmented Generation (RAG), and Time Series Analysis.</p>
+                    <p>I'm a <b>Data Scientist / Data Analyst</b> with a passion for <b>LLM Fine-Tuning</b>, <b>RAG Pipelines</b>, and <b>Deep Learning</b>. With an <b>M.Sc. in Statistics</b> and hands-on experience building production ML systems, I bridge the gap between academic theory and real-world impact.</p>
                     <p>I enjoy transforming raw, messy data into clean, interpretable insights — and then packaging those insights into tools that people can actually use.</p>
+
+                    <div class="current-work">
+                        <h4>🎯 Currently Working On</h4>
+                        <ul class="current-work-list">
+                            <li>LLM Fine-tuning with <b>QLoRA / PEFT / TRL</b></li>
+                            <li>Building T5-based <b>code documentation generator</b></li>
+                            <li>nanoGPT-style <b>small LLM from scratch</b> (in progress)</li>
+                            <li>Multi-agent RAG systems — <b>LangGraph, AutoGen</b></li>
+                        </ul>
+                    </div>
+
                     <div class="about-stats">
                         <div class="about-stat">
                             <div class="num">02+</div>
                             <div class="label">Years Coding</div>
                         </div>
                         <div class="about-stat">
-                            <div class="num">5+</div>
+                            <div class="num">12+</div>
                             <div class="label">Projects</div>
                         </div>
                         <div class="about-stat">
@@ -909,18 +994,25 @@
                 </div>
                 <div class="about-sidebar">
                     <div class="info-block">
+                        <h4>Key Highlights</h4>
+                        <div class="info-row"><i class="fas fa-building"></i> Data Analyst Intern @ IDEAS-TIH, ISI Kolkata</div>
+                        <div class="info-row"><i class="fas fa-chart-bar"></i> Built XInsight — Streamlit analytics for 10+ analysts</div>
+                        <div class="info-row"><i class="fas fa-robot"></i> Automated QA pipeline for 50,000+ PLFS records</div>
+                        <div class="info-row"><i class="fas fa-box-open"></i> Published sql-mcp-server to PyPI</div>
+                        <div class="info-row"><i class="fas fa-heartbeat"></i> Medical Q&A fine-tuned model on HuggingFace Hub</div>
+                    </div>
+                    <div class="info-block">
                         <h4>Details</h4>
                         <div class="info-row"><i class="fas fa-map-marker-alt"></i> Kolkata, West Bengal</div>
                         <div class="info-row"><i class="fas fa-graduation-cap"></i> M.Sc. Statistics</div>
-                        <div class="info-row"><i class="fas fa-building"></i> ISI IDEAS-TIH Intern</div>
                         <div class="info-row"><i class="fas fa-envelope"></i> snehangshubhuin@gmail.com</div>
                     </div>
                     <div class="info-block">
                         <h4>Focus Areas</h4>
-                        <div class="info-row"><i class="fas fa-robot"></i> NLP & RAG Systems</div>
+                        <div class="info-row"><i class="fas fa-robot"></i> LLM Fine-Tuning & RAG Systems</div>
+                        <div class="info-row"><i class="fas fa-brain"></i> NLP & Deep Learning</div>
                         <div class="info-row"><i class="fas fa-chart-line"></i> Time Series Analysis</div>
                         <div class="info-row"><i class="fas fa-database"></i> Data Pipeline Engineering</div>
-                        <div class="info-row"><i class="fas fa-eye"></i> Statistical Modeling</div>
                     </div>
                 </div>
             </div>
@@ -935,14 +1027,27 @@
             <div class="timeline-modern">
                 <div class="tm-item">
                     <div class="tm-dot"></div>
-                    <div class="tm-date">NOV 2025 — PRESENT</div>
+                    <div class="tm-date">NOV 2025 — MAR 2026</div>
                     <div class="tm-card">
                         <h3>Data Analyst Intern</h3>
                         <h4>Indian Statistical Institute (IDEAS-TIH) · Kolkata</h4>
                         <ul>
-                            <li>Analysing <b>PLFS datasets</b> from MOSPI — data cleaning, quality checks, and anomaly identification across key variables.</li>
-                            <li>Building an <b>anomaly detection pipeline</b> using Python and DuckDB to streamline validation of household and individual-level records.</li>
-                            <li>Developing a modular <b>Streamlit application</b> for uploading, exploring, and visualising PLFS data — packaging as standalone EXE for internal use.</li>
+                            <li><b>PLFS Data Quality Pipeline</b> (Python + DuckDB) → 50,000+ survey records | 30+ variables | <b>-60% manual QA effort</b></li>
+                            <li><b>Built & Deployed XInsight</b> — Self-serve Streamlit analytics app → Adopted by <b>10+ analysts</b> | eliminated reporting bottleneck</li>
+                            <li><b>Embedded AI NL Query Assistant</b> for non-technical users → <b>-40% deployment turnaround time</b></li>
+                            <li><b>RapidMiner Evaluation</b> across 15 tasks → 8-rec gap report → Directly adopted into product roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tm-item">
+                    <div class="tm-dot"></div>
+                    <div class="tm-date">OCT 2025</div>
+                    <div class="tm-card">
+                        <h3>Data Science Intern</h3>
+                        <h4>DataSpace Academy</h4>
+                        <ul>
+                            <li><b>Churn Prediction</b> on 7,000+ telecom records → <b>79.7% accuracy</b></li>
+                            <li>Executive churn report with heatmaps + retention recommendations</li>
                         </ul>
                     </div>
                 </div>
@@ -963,8 +1068,9 @@
                     <div class="edu-meta">
                         <span class="edu-pill highlight">CGPA 7.37</span>
                         <span class="edu-pill">Machine Learning</span>
-                        <span class="edu-pill">Time Series</span>
-                        <span class="edu-pill">Advanced Statistics</span>
+                        <span class="edu-pill">Time Series Analysis</span>
+                        <span class="edu-pill">Advanced Statistical Inference</span>
+                        <span class="edu-pill">Multivariate Analysis</span>
                     </div>
                 </div>
                 <div class="edu-card">
@@ -973,8 +1079,9 @@
                     <div class="uni">Visva-Bharati University · Santiniketan, WB</div>
                     <div class="edu-meta">
                         <span class="edu-pill highlight">CGPA 7.43</span>
-                        <span class="edu-pill">Probability</span>
+                        <span class="edu-pill">Probability Theory</span>
                         <span class="edu-pill">Regression</span>
+                        <span class="edu-pill">Sampling Theory</span>
                         <span class="edu-pill">Statistical Inference</span>
                     </div>
                 </div>
@@ -989,53 +1096,73 @@
             <h2 class="section-title">My <em>Arsenal</em></h2>
             <div class="skills-layout">
                 <div class="skill-card">
-                    <div class="skill-card-icon"><i class="fas fa-code"></i></div>
-                    <h3>Programming</h3>
+                    <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>LLM, GenAI & Deep Learning</h3>
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">R</span>
-                        <span class="tag">SQL</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="">PyTorch</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="">TensorFlow</span>
+                        <span class="tag"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="">HuggingFace</span>
+                        <span class="tag">QLoRA / PEFT</span>
+                        <span class="tag">TRL / SFTTrainer</span>
+                        <span class="tag"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="" style="filter:invert(0.6)">LangChain</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">FAISS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming Languages</h3>
+                    <div class="tags">
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="">R</span>
+                        <span class="tag"><img src="https://cdn.simpleicons.org/sqlite/003B57" alt="" style="filter:brightness(2)">SQL</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="">T-SQL</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-card-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3>ML & Analytics</h3>
                     <div class="tags">
-                        <span class="tag">Regression</span>
+                        <span class="tag"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="">Scikit-learn</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="">Pandas</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="">NumPy</span>
                         <span class="tag">NLP</span>
-                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Time Series</span>
                         <span class="tag">Predictive Modeling</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI Tools</h3>
-                    <div class="tags">
-                        <span class="tag">LangChain</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">FAISS</span>
-                        <span class="tag">Gemini Embeddings</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools & Libraries</h3>
-                    <div class="tags">
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">Excel</span>
-                        <span class="tag">Git</span>
+                        <span class="tag">Data Visualization</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-card-icon"><i class="fas fa-database"></i></div>
-                    <h3>Databases</h3>
+                    <h3>Databases & Platforms</h3>
                     <div class="tags">
-                        <span class="tag">SQL Server</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="">MongoDB</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="">SQL Server</span>
                         <span class="tag">DuckDB</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & DevOps</h3>
+                    <div class="tags">
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">Docker</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" style="filter:invert(0.7)">Git / GitHub</span>
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="">VS Code</span>
+                        <span class="tag"><img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="">Streamlit</span>
+                        <span class="tag"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="">n8n</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Automation & MLOps</h3>
+                    <div class="tags">
+                        <span class="tag"><img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="" style="filter:brightness(0.7)">MCP Servers</span>
+                        <span class="tag"><img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="">Gemini Embeddings</span>
+                        <span class="tag">Groq</span>
+                        <span class="tag">Optuna</span>
+                        <span class="tag">SMOTE</span>
                     </div>
                 </div>
             </div>
@@ -1047,22 +1174,155 @@
         <div class="wrap">
             <div class="section-tag">05 — Projects</div>
             <h2 class="section-title">Featured <em>Work</em></h2>
+
+            <!-- LLM & Deep Learning -->
+            <div class="project-category-label">🔬 LLM & Deep Learning</div>
             <div class="projects-layout">
 
                 <div class="proj-card">
-                    <div class="proj-num">01 / 05</div>
-                    <h3>Conversational RAG Chatbot</h3>
+                    <div class="proj-num">01 / 12</div>
+                    <h3>🧬 Medical Q&A LLM Fine-Tuning</h3>
                     <div class="proj-tech">
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">Gemini</span>
-                        <span class="tech-tag">FAISS</span>
-                        <span class="tech-tag">LLaMA-3.3</span>
+                        <span class="tech-tag">TinyLlama-1.1B</span>
+                        <span class="tech-tag">QLoRA</span>
+                        <span class="tech-tag">TRL/SFTTrainer</span>
+                        <span class="tech-tag">HuggingFace Hub</span>
                     </div>
                     <div class="proj-desc">
                         <ul>
-                            <li>Conversational AI chatbot for PDF upload & querying with context retention</li>
-                            <li>LangChain + Groq LLM + Gemini embeddings + FAISS semantic search</li>
-                            <li>Multi-PDF support with persistent chat history and document chunking</li>
+                            <li>Fine-tuned on 5,000 samples (MedQuad + ChatDoctor) with 4-bit NF4 quantization</li>
+                            <li>LoRA adapters r=16, α=32 across all attention + MLP layers</li>
+                            <li>3 progressive training rounds. Deployed to HuggingFace Hub</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://huggingface.co/snehangshu511/MedQA-TinyLlama-QLoRA-v3" target="_blank" class="proj-link highlight-link"><i class="fas fa-external-link-alt"></i> HF Model</a>
+                        <a href="https://colab.research.google.com/drive/1kvrBhXElXRODwva8ntW-qsngi9Tpe_IW?usp=sharing" target="_blank" class="proj-link"><i class="fas fa-book"></i> Colab</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">02 / 12</div>
+                    <h3>⚙️ Predictive Maintenance — PyTorch</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Optuna (20 trials)</span>
+                        <span class="tech-tag">SMOTE</span>
+                        <span class="tech-tag">AI4I 2020</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>10k samples, 3.4% failure rate. Baseline ANN hit 96% acc but 0.49 precision</li>
+                            <li>Post-Optuna HPO: 98% acc · 0.78 F1 · 0.97 recall</li>
+                            <li>Production checkpoint with scaler + encoder metadata</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/Predictive-Maintenance-PyTorch" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">03 / 12</div>
+                    <h3>📈 Stock Price Prediction — LSTM vs GRU</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">TensorFlow/Keras</span>
+                        <span class="tech-tag">LSTM</span>
+                        <span class="tech-tag">GRU</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>GRU: R² 0.87, RMSE 0.021 vs LSTM R² 0.84 — 25% fewer params</li>
+                            <li>7-business-day forecast. 100-step windows. Modular src/ pipeline</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/stock-lstm-gru" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">04 / 12</div>
+                    <h3>🏷️ NER — BiLSTM + Word2Vec</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">BiLSTM</span>
+                        <span class="tech-tag">Word2Vec 200-d</span>
+                        <span class="tech-tag">CoNLL-2003</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>14k sentences, 9 NER tags, 2-layer BiLSTM with 128 units</li>
+                            <li>Correctly identifies PER, ORG, LOC on real-world examples</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/NER-BiLSTM-Word2Vec" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- AI Tools, Automation & MLOps -->
+            <div class="project-category-label">🛠️ AI Tools, Automation & MLOps</div>
+            <div class="projects-layout">
+
+                <div class="proj-card">
+                    <div class="proj-num">05 / 12</div>
+                    <h3>🔌 SQL Assistant MCP Server</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP (stdio)</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">PyPI Published</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>Open-source MCP server connecting Claude Desktop to SQL Server</li>
+                            <li>5 tools: list_tables, run_query, explain_query, describe_table, get_table_sample</li>
+                            <li>SQL injection protection + write-blocking</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/sql-mcp-server" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://pypi.org/project/sql-mcp-server/" target="_blank" class="proj-link highlight-link"><i class="fas fa-box-open"></i> PyPI</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">06 / 12</div>
+                    <h3>📄 ATS Resume Optimizer — n8n</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">Mistral Large</span>
+                        <span class="tech-tag">Gmail API</span>
+                        <span class="tech-tag">HTML2PDF</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>Parses JD → rewrites bullets for ATS → scores fit</li>
+                            <li>Keyword, experience, seniority, education scoring</li>
+                            <li>Emails optimized PDF. Manual tailoring effort: zero</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/ats-resume-enhancer" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">07 / 12</div>
+                    <h3>🤖 Conversational RAG Chatbot</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Groq (LLaMA-3.3-70B)</span>
+                        <span class="tech-tag">Gemini Embeddings</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>Multi-PDF chatbot with persistent history & document chunking</li>
+                            <li>FAISS semantic retrieval with Groq LLM inference</li>
                         </ul>
                     </div>
                     <div class="proj-footer">
@@ -1071,19 +1331,81 @@
                 </div>
 
                 <div class="proj-card">
-                    <div class="proj-num">02 / 05</div>
-                    <h3>Fake News Classifier</h3>
+                    <div class="proj-num">08 / 12</div>
+                    <h3>🍔 AI Food Ordering Automation</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">Telegram Bot API</span>
+                        <span class="tech-tag">Razorpay</span>
+                        <span class="tech-tag">Google Sheets</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>Conversational ordering with session memory</li>
+                            <li>Payment validation, customer notifications, live Sheets DB</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/AI-Powered-Food-Ordering-Automation-System" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Data Analysis & Classic ML -->
+            <div class="project-category-label">📊 Data Analysis & Classic ML</div>
+            <div class="projects-layout">
+
+                <div class="proj-card">
+                    <div class="proj-num">09 / 12</div>
+                    <h3>💎 RFM Customer Loyalty Analysis</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>9,994 transactions → Platinum/Gold/Silver/Bronze segmentation</li>
+                            <li>289 Gold upgrade candidates, 122 Bronze win-back targets</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/customer-loyalty-rfm" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">10 / 12</div>
+                    <h3>📉 Sales Performance Analysis</h3>
+                    <div class="proj-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">T-SQL</span>
+                        <span class="tech-tag">Window Functions</span>
+                    </div>
+                    <div class="proj-desc">
+                        <ul>
+                            <li>Texas: $25K net loss on $170K revenue</li>
+                            <li>30%+ discount → avg -48% margin. 4 SQL modules with RANK, LAG, PARTITION BY</li>
+                        </ul>
+                    </div>
+                    <div class="proj-footer">
+                        <a href="https://github.com/snehangshu2002/Superstore-Sales-Analysis" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-num">11 / 12</div>
+                    <h3>📰 Fake News Classifier</h3>
                     <div class="proj-tech">
                         <span class="tech-tag">NLP</span>
                         <span class="tech-tag">TF-IDF</span>
                         <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Python</span>
                     </div>
                     <div class="proj-desc">
                         <ul>
-                            <li>NLP-based text classification system to detect fake news articles</li>
-                            <li>Tokenization, stopword removal, TF-IDF vectorization pipeline</li>
-                            <li>90% accuracy on 5,000+ labeled news article dataset</li>
+                            <li>5,000+ articles with 90% accuracy</li>
+                            <li>Real-time Streamlit app deployment</li>
                         </ul>
                     </div>
                     <div class="proj-footer">
@@ -1092,66 +1414,26 @@
                 </div>
 
                 <div class="proj-card">
-                    <div class="proj-num">03 / 05</div>
-                    <h3>Telecom Churn Prediction</h3>
+                    <div class="proj-num">12 / 12</div>
+                    <h3>📡 Telecom Churn Prediction</h3>
                     <div class="proj-tech">
-                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">SMOTE</span>
                         <span class="tech-tag">Pandas</span>
                     </div>
                     <div class="proj-desc">
                         <ul>
-                            <li>ML pipeline to predict telecom customer churn using Logistic Regression & Random Forest</li>
-                            <li>Feature engineering & SMOTE class balancing on 7,000+ records</li>
-                            <li>79.7% accuracy with churn driver visualization via heatmaps</li>
+                            <li>7,000+ records with 79.7% accuracy</li>
+                            <li>Top 5 churn drivers identified with heatmap visualization</li>
                         </ul>
                     </div>
                     <div class="proj-footer">
-                        <a href="https://github.com/snehangshu2002/Customer-Churn-Prediction" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-num">04 / 05</div>
-                    <h3>Heart Disease Prediction</h3>
-                    <div class="proj-tech">
-                        <span class="tech-tag">Logistic Regression</span>
-                        <span class="tech-tag">Decision Trees</span>
-                        <span class="tech-tag">EDA</span>
-                    </div>
-                    <div class="proj-desc">
-                        <ul>
-                            <li>Healthcare prediction model for heart disease risk assessment</li>
-                            <li>EDA, feature selection, normalization on 1,500+ patient records</li>
-                            <li>85% test accuracy with Matplotlib visualizations of key predictors</li>
-                        </ul>
-                    </div>
-                    <div class="proj-footer">
-                        <a href="https://github.com/snehangshu2002/Heart-Disease-Classification" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-num">05 / 05</div>
-                    <h3>HR Analytics Dashboard</h3>
-                    <div class="proj-tech">
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Pivot Tables</span>
-                        <span class="tech-tag">KPI Design</span>
-                    </div>
-                    <div class="proj-desc">
-                        <ul>
-                            <li>Interactive Excel dashboard for employee attrition & workforce analytics</li>
-                            <li>KPIs: attrition rate, active employees, age distribution via pivot tables</li>
-                            <li>Department-wise filtering for data-driven HR decision-making</li>
-                        </ul>
-                    </div>
-                    <div class="proj-footer">
-                        <a href="https://github.com/snehangshu2002/HR-Analytics-Dashboard" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://github.com/snehangshu2002/Churn-Prediction-System" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
@@ -1162,20 +1444,20 @@
             <h2 class="section-title">Credentials & <em>Simulations</em></h2>
             <div class="cert-layout">
                 <div class="cert-card">
-                    <div class="cert-org">British Airways</div>
-                    <div class="cert-date">Data Science Job Simulation · Oct 2025</div>
-                    <p>Web scraping customer reviews & building predictive models for buying behavior forecasting.</p>
-                    <a href="https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_k6g6cv8LxzapAyEdB_1760341229900_completion_certificate.pdf" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-org">Deloitte</div>
-                    <div class="cert-date">Data Analytics Simulation · Jun 2025</div>
+                    <div class="cert-org">Deloitte (Forage)</div>
+                    <div class="cert-date">Data Analytics Job Simulation</div>
                     <p>Built Tableau dashboards & performed forensic data analysis on real-world business datasets.</p>
                     <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_k6g6cv8LxzapAyEdB_1750658504746_completion_certificate.pdf" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
                 </div>
                 <div class="cert-card">
+                    <div class="cert-org">British Airways (Forage)</div>
+                    <div class="cert-date">Data Science Job Simulation</div>
+                    <p>Web scraping customer reviews & building predictive models for buying behavior forecasting.</p>
+                    <a href="https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_k6g6cv8LxzapAyEdB_1760341229900_completion_certificate.pdf" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+                </div>
+                <div class="cert-card">
                     <div class="cert-org">DataSpace Academy</div>
-                    <div class="cert-date">Data Science Certification · 2024</div>
+                    <div class="cert-date">Data Science Certification</div>
                     <p>Comprehensive curriculum covering ML algorithms, statistical methods & real-world applications.</p>
                     <a href="https://drive.google.com/file/d/1gKpt4Jj2LKN5X2iF4THYTr2kX-cGBP4q/view" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
                 </div>
@@ -1189,9 +1471,9 @@
             <div class="section-tag">07 — GitHub</div>
             <h2 class="section-title">Code <em>Activity</em></h2>
             <div class="github-layout">
-                <img src="https://github-readme-stats.vercel.app/api?username=snehangshu2002&show_icons=true&theme=dark&count_private=true&hide_border=true&bg_color=1a1a1a&title_color=e85d04&icon_color=e85d04&text_color=f5f0e8" alt="GitHub Stats">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehangshu2002&layout=compact&langs_count=6&theme=dark&hide_border=true&bg_color=1a1a1a&title_color=e85d04&text_color=f5f0e8" alt="Top Languages">
-                <img src="https://streak-stats.demolab.com/?user=snehangshu2002&theme=dark&hide_border=true&background=1a1a1a&ring=e85d04&fire=e85d04&currStreakLabel=e85d04" alt="Streak">
+                <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=snehangshu2002&show_icons=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&icon_color=e85d04&hide_border=true" alt="GitHub Stats">
+                <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=snehangshu2002&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&hide_border=true" alt="Top Languages">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=snehangshu2002&theme=dark&background=00000000&ring=e85d04&fire=e85d04&currStreakLabel=ffffff&hide_border=true" alt="Streak">
             </div>
         </div>
     </section>
@@ -1208,6 +1490,8 @@
                         <a href="mailto:snehangshubhuin@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
                         <a href="https://www.linkedin.com/in/snehangshu-bhuin-b02987279" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/snehangshu2002" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://huggingface.co/snehangshu511" target="_blank" class="social-btn" title="HuggingFace"><i class="fas fa-robot"></i></a>
+                        <a href="https://pypi.org/project/sql-mcp-server/" target="_blank" class="social-btn" title="PyPI"><i class="fas fa-box-open"></i></a>
                     </div>
                 </div>
                 <div class="contact-info">
@@ -1233,6 +1517,13 @@
                         </div>
                     </div>
                     <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-robot"></i></div>
+                        <div class="contact-item-text">
+                            <div class="label">HuggingFace</div>
+                            <div class="value">snehangshu511</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
                         <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-item-text">
                             <div class="label">Location</div>
@@ -1246,7 +1537,7 @@
 
     <footer>
         <div class="wrap">
-            <p>© 2025 Snehangshu Bhuin · Crafted with precision · <span style="color:var(--orange)">⚡ Turning Data into Decisions</span></p>
+            <p>© 2026 Snehangshu Bhuin · Crafted with precision · <span style="color:var(--orange)">⚡ Turning Data into Decisions</span></p>
         </div>
     </footer>
 
@@ -1286,7 +1577,7 @@
 
         // Typing
         const typingEl = document.querySelector('.typing-text');
-        const words = ["Data Scientist", "Data Analyst", "ML Enthusiast", "Statistician", "Problem Solver"];
+        const words = ["Data Scientist", "Data Analyst", "LLM Fine-Tuning", "RAG Pipelines", "NLP & Deep Learning", "Statistician"];
         let wi = 0, ci = 0, deleting = false;
 
         function type() {
