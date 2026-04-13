@@ -208,12 +208,14 @@
             opacity: 0; animation: slideUp 0.7s 0.8s forwards;
         }
 
+        a, button { cursor: pointer; }
+
         .btn {
             font-family: var(--font-mono);
             font-size: 0.82rem; letter-spacing: 0.05em;
             padding: 0.85rem 2rem;
             border-radius: 3px;
-            border: none; cursor: none;
+            border: none; cursor: pointer;
             text-decoration: none;
             transition: all 0.2s;
             display: inline-block;
@@ -911,7 +913,17 @@
             right: -200px; top: 50%; transform: translateY(-50%);
         }
 
-        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .contact-layout { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem; }
+
+        .contact-text {
+            text-align: center;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        #contact .section-tag { justify-content: center; }
+
+        .contact-socials { justify-content: center; }
 
         .contact-text h2 {
             font-family: var(--font-head);
@@ -933,6 +945,7 @@
             display: flex; align-items: center; justify-content: center;
             font-size: 1rem; color: var(--muted);
             text-decoration: none;
+            cursor: pointer;
             transition: all 0.2s;
         }
 
@@ -1765,43 +1778,6 @@
                         <a href="https://github.com/snehangshu2002" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://huggingface.co/snehangshu511" target="_blank" class="social-btn" title="HuggingFace"><i class="fas fa-robot"></i></a>
                         <a href="https://pypi.org/project/sql-mcp-server/" target="_blank" class="social-btn" title="PyPI"><i class="fas fa-box-open"></i></a>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-item-text">
-                            <div class="label">Email</div>
-                            <div class="value">snehangshubhuin@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="contact-item-text">
-                            <div class="label">LinkedIn</div>
-                            <div class="value">snehangshu-bhuin-b02987279</div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fab fa-github"></i></div>
-                        <div class="contact-item-text">
-                            <div class="label">GitHub</div>
-                            <div class="value">@snehangshu2002</div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fas fa-robot"></i></div>
-                        <div class="contact-item-text">
-                            <div class="label">HuggingFace</div>
-                            <div class="value">snehangshu511</div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-item-text">
-                            <div class="label">Location</div>
-                            <div class="value">Kolkata, West Bengal, India</div>
-                        </div>
                     </div>
                 </div>
             </div>
