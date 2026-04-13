@@ -754,7 +754,6 @@
             width: 14px; height: 14px;
             object-fit: contain;
             flex-shrink: 0;
-            filter: grayscale(80%) opacity(0.7);
             transition: all 0.2s;
         }
 
@@ -764,7 +763,7 @@
             color: var(--white);
             transform: translateY(-2px);
         }
-        .tag:hover img { filter: grayscale(0%) opacity(1) drop-shadow(0 0 4px rgba(255,255,255,0.2)); }
+        .tag:hover img { filter: drop-shadow(0 0 4px rgba(255,255,255,0.2)); }
 
         /* PROJECTS */
         #projects { background: var(--gray); }
@@ -1016,6 +1015,7 @@
             width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(232,93,4,0.07) 0%, transparent 70%);
             right: -200px; top: 50%; transform: translateY(-50%);
+            pointer-events: none;
         }
 
         .contact-layout { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem; }
@@ -1046,12 +1046,17 @@
             width: 46px; height: 46px;
             background: var(--gray);
             border: 1px solid var(--border);
-            border-radius: 3px;
+            border-radius: 6px; /* Slightly rounder to match new theme */
             display: flex; align-items: center; justify-content: center;
-            font-size: 1rem; color: var(--muted);
+            font-size: 1.1rem; color: var(--white); /* Bright white by default now */
             text-decoration: none;
             cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
             transition: all 0.2s;
+            position: relative;
+            z-index: 5;
         }
 
         .social-btn:hover {
