@@ -890,14 +890,98 @@
 
         .cert-link:hover { text-decoration: underline; }
 
-        /* GITHUB STATS */
-        #github { background: var(--gray); }
+        /* GITHUB */
+        #github { background: var(--black); }
 
-        .github-layout {
-            display: flex; flex-direction: column; align-items: center; gap: 2rem;
+        .github-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .github-layout img { max-width: 100%; height: auto; border-radius: 3px; }
+        .github-card {
+            background: var(--gray);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+        }
+
+        .github-card:hover {
+            border-color: rgba(232,93,4,0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(232,93,4,0.1);
+        }
+
+        .github-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle at top right, rgba(232,93,4,0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .github-card-label {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--orange);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .github-card-label::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+        }
+
+        .github-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .github-streak {
+            background: var(--gray);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .github-streak:hover {
+            border-color: rgba(232,93,4,0.35);
+            box-shadow: 0 16px 40px rgba(232,93,4,0.1);
+        }
+
+        .github-streak::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+        }
+
+        .github-streak img {
+            width: 100%;
+            max-width: 680px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
 
         /* CONTACT */
         #contact {
@@ -1756,10 +1840,23 @@
         <div class="wrap">
             <div class="section-tag">07 — GitHub</div>
             <h2 class="section-title">Code <em>Activity</em></h2>
-            <div class="github-layout">
-                <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=snehangshu2002&show_icons=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&icon_color=e85d04&hide_border=true" alt="GitHub Stats">
-                <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=snehangshu2002&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&hide_border=true" alt="Top Languages">
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=snehangshu2002&theme=dark&background=00000000&ring=e85d04&fire=e85d04&currStreakLabel=ffffff&hide_border=true" alt="Streak">
+
+            <!-- Stats + Top Languages side by side -->
+            <div class="github-grid">
+                <div class="github-card">
+                    <div class="github-card-label">GitHub Stats</div>
+                    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=snehangshu2002&show_icons=true&theme=dark&bg_color=00000000&title_color=e85d04&text_color=f5f0e8&icon_color=e85d04&hide_border=true&rank_icon=github" alt="GitHub Stats">
+                </div>
+                <div class="github-card">
+                    <div class="github-card-label">Top Languages</div>
+                    <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=snehangshu2002&layout=compact&theme=dark&bg_color=00000000&title_color=e85d04&text_color=f5f0e8&hide_border=true&langs_count=8" alt="Top Languages">
+                </div>
+            </div>
+
+            <!-- Streak full width -->
+            <div class="github-streak">
+                <div class="github-card-label">Contribution Streak</div>
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=snehangshu2002&theme=dark&background=00000000&ring=e85d04&fire=e85d04&currStreakLabel=e85d04&sideLabels=f5f0e8&dates=6b6b6b&hide_border=true" alt="GitHub Streak">
             </div>
         </div>
     </section>
