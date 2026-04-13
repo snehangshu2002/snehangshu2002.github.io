@@ -319,111 +319,232 @@
         .section-title em { font-style: normal; color: var(--orange); }
 
         /* ABOUT */
-        #about { background: var(--gray); }
+        #about { background: var(--gray); position: relative; overflow: hidden; }
+
+        /* subtle decorative blob */
+        #about::after {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(232,93,4,0.05) 0%, transparent 70%);
+            top: -100px; right: -100px;
+            pointer-events: none;
+        }
 
         .about-layout {
             display: grid; grid-template-columns: 3fr 2fr;
             gap: 5rem; align-items: start;
+            position: relative; z-index: 1;
         }
+
+        /* ── Bio ── */
+        .about-bio-intro {
+            position: relative;
+            padding: 1.8rem 2rem;
+            background: var(--black);
+            border-left: 3px solid var(--orange);
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 2rem;
+        }
+
+        .about-bio-intro::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.6rem; left: 1rem;
+            font-family: var(--font-head);
+            font-size: 5rem;
+            color: var(--orange);
+            opacity: 0.18;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .about-bio-intro p {
+            color: var(--white);
+            font-size: 1.08rem;
+            line-height: 1.85;
+            font-weight: 400;
+        }
+
+        .about-bio-intro p b { color: var(--orange); font-weight: 600; }
 
         .about-bio p {
             color: var(--muted);
-            font-size: 1.05rem; line-height: 1.9;
+            font-size: 1rem; line-height: 1.9;
             margin-bottom: 1.5rem;
         }
 
         .about-bio p b { color: var(--white); font-weight: 500; }
 
+        /* ── Stats ── */
         .about-stats {
             display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem; margin-top: 3rem;
+            gap: 1rem; margin-top: 2.5rem;
         }
 
         .about-stat {
-            padding: 1.5rem;
+            padding: 1.5rem 1.2rem;
             background: var(--black);
             border: 1px solid var(--border);
-            border-radius: 3px;
-            transition: border-color 0.2s;
+            border-radius: 6px;
+            text-align: center;
+            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .about-stat:hover { border-color: var(--orange); }
+        .about-stat::before {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .about-stat:hover {
+            border-color: rgba(232,93,4,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(232,93,4,0.12);
+        }
+
+        .about-stat:hover::before { opacity: 1; }
+
+        .about-stat .stat-icon {
+            font-size: 1.2rem;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
 
         .about-stat .num {
             font-family: var(--font-head);
-            font-size: 2.2rem; font-weight: 800;
-            color: var(--orange);
+            font-size: 2.4rem; font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             line-height: 1;
         }
 
         .about-stat .label {
             font-family: var(--font-mono);
-            font-size: 0.72rem; color: var(--muted);
-            letter-spacing: 0.08em; text-transform: uppercase;
-            margin-top: 0.3rem;
+            font-size: 0.68rem; color: var(--muted);
+            letter-spacing: 0.1em; text-transform: uppercase;
+            margin-top: 0.4rem;
         }
 
-        .about-sidebar {}
+        /* ── Currently Working On ── */
+        .current-work { margin-top: 2.5rem; }
 
+        .current-work-header {
+            display: flex; align-items: center; gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .current-work-header h4 {
+            font-family: var(--font-mono);
+            font-size: 0.78rem; color: var(--orange);
+            letter-spacing: 0.12em; text-transform: uppercase;
+        }
+
+        .live-dot {
+            width: 7px; height: 7px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(34,197,94,0.5);
+            animation: livePulse 1.8s ease-out infinite;
+        }
+
+        @keyframes livePulse {
+            0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+            70%  { box-shadow: 0 0 0 7px rgba(34,197,94,0); }
+            100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+        }
+
+        .current-work-list { list-style: none; }
+
+        .current-work-list li {
+            display: flex; align-items: flex-start; gap: 0.8rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            background: var(--black);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.9rem; color: var(--muted);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .current-work-list li:hover {
+            border-color: rgba(232,93,4,0.3);
+            background: rgba(232,93,4,0.03);
+        }
+
+        .work-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.05rem;
+        }
+
+        .current-work-list li b { color: var(--white); font-weight: 500; }
+
+        /* ── Sidebar ── */
         .info-block {
             background: var(--black);
             border: 1px solid var(--border);
-            border-radius: 3px;
+            border-radius: 6px;
             padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .info-block:hover {
+            border-color: rgba(232,93,4,0.3);
+            box-shadow: 0 8px 24px rgba(232,93,4,0.07);
+        }
+
+        .info-block::before {
+            content: '';
+            position: absolute; top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: linear-gradient(to bottom, var(--orange), transparent);
+            border-radius: 6px 0 0 6px;
         }
 
         .info-block h4 {
             font-family: var(--font-mono);
-            font-size: 0.72rem; letter-spacing: 0.1em;
+            font-size: 0.7rem; letter-spacing: 0.12em;
             text-transform: uppercase; color: var(--orange);
-            margin-bottom: 1rem;
+            margin-bottom: 1.1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        .info-block h4::after {
+            content: ''; flex: 1;
+            height: 1px;
+            background: var(--border);
         }
 
         .info-row {
-            display: flex; gap: 0.6rem;
+            display: flex; gap: 0.7rem;
             align-items: center;
-            font-size: 0.9rem; color: var(--muted);
-            margin-bottom: 0.6rem;
+            font-size: 0.88rem; color: var(--muted);
+            padding: 0.45rem 0;
+            border-bottom: 1px solid rgba(245,240,232,0.04);
+            transition: color 0.15s;
         }
 
-        .info-row i { color: var(--orange); font-size: 0.75rem; width: 14px; }
+        .info-row:last-child { border-bottom: none; }
+        .info-row:hover { color: var(--white); }
 
-        /* CURRENTLY WORKING ON */
-        .current-work {
-            margin-top: 2rem;
+        .info-row i {
+            color: var(--orange);
+            font-size: 0.78rem;
+            width: 16px; text-align: center;
+            flex-shrink: 0;
         }
-
-        .current-work h4 {
-            font-family: var(--font-mono);
-            font-size: 0.8rem; color: var(--orange);
-            letter-spacing: 0.1em; text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .current-work-list {
-            list-style: none;
-        }
-
-        .current-work-list li {
-            color: var(--muted);
-            font-size: 0.92rem;
-            padding: 0.5rem 0;
-            padding-left: 1.4rem;
-            position: relative;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .current-work-list li:last-child { border-bottom: none; }
-
-        .current-work-list li::before {
-            content: '✦';
-            position: absolute; left: 0;
-            color: var(--orange); font-size: 0.6rem;
-            top: 0.7rem;
-        }
-
-        .current-work-list li b { color: var(--white); font-weight: 500; }
 
         /* EXPERIENCE */
         #experience {}
@@ -1101,34 +1222,49 @@
             <h2 class="section-title">Who I <em>Am</em></h2>
             <div class="about-layout">
                 <div class="about-bio">
-                    <p>I'm a <b>Data Scientist / Data Analyst</b> with a passion for <b>LLM Fine-Tuning</b>, <b>RAG Pipelines</b>, and <b>Deep Learning</b>. With an <b>M.Sc. in Statistics</b> and hands-on experience building production ML systems, I bridge the gap between academic theory and real-world impact.</p>
+
+                    <!-- Highlighted intro quote -->
+                    <div class="about-bio-intro">
+                        <p>I'm a <b>Data Scientist &amp; Analyst</b> with a deep passion for <b>LLM Fine-Tuning</b>, <b>RAG Pipelines</b>, and <b>Deep Learning</b>. Armed with an <b>M.Sc. in Statistics</b> and hands-on production ML experience, I bridge academic theory and real-world impact.</p>
+                    </div>
+
                     <p>I enjoy transforming raw, messy data into clean, interpretable insights — and then packaging those insights into tools that people can actually use.</p>
 
+                    <!-- Currently Working On -->
                     <div class="current-work">
-                        <h4>🎯 Currently Working On</h4>
+                        <div class="current-work-header">
+                            <div class="live-dot"></div>
+                            <h4>Currently Working On</h4>
+                        </div>
                         <ul class="current-work-list">
-                            <li>LLM Fine-tuning with <b>QLoRA / PEFT / TRL</b></li>
-                            <li>Building T5-based <b>code documentation generator</b></li>
-                            <li>nanoGPT-style <b>small LLM from scratch</b> (in progress)</li>
-                            <li>Multi-agent RAG systems — <b>LangGraph, AutoGen</b></li>
+                            <li><span class="work-icon">🧠</span><span>LLM Fine-tuning with <b>QLoRA / PEFT / TRL</b></span></li>
+                            <li><span class="work-icon">📄</span><span>T5-based <b>code documentation generator</b></span></li>
+                            <li><span class="work-icon">⚡</span><span>nanoGPT-style <b>small LLM from scratch</b> (in progress)</span></li>
+                            <li><span class="work-icon">🕸️</span><span>Multi-agent RAG systems — <b>LangGraph, AutoGen</b></span></li>
                         </ul>
                     </div>
 
+                    <!-- Stats -->
                     <div class="about-stats">
                         <div class="about-stat">
+                            <div class="stat-icon"><i class="fas fa-code"></i></div>
                             <div class="num">02+</div>
                             <div class="label">Years Coding</div>
                         </div>
                         <div class="about-stat">
+                            <div class="stat-icon"><i class="fas fa-folder-open"></i></div>
                             <div class="num">12+</div>
                             <div class="label">Projects</div>
                         </div>
                         <div class="about-stat">
+                            <div class="stat-icon"><i class="fas fa-certificate"></i></div>
                             <div class="num">03+</div>
                             <div class="label">Certifications</div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Sidebar -->
                 <div class="about-sidebar">
                     <div class="info-block">
                         <h4>Key Highlights</h4>
@@ -1136,7 +1272,7 @@
                         <div class="info-row"><i class="fas fa-chart-bar"></i> Built XInsight — Streamlit analytics for 10+ analysts</div>
                         <div class="info-row"><i class="fas fa-robot"></i> Automated QA pipeline for 50,000+ PLFS records</div>
                         <div class="info-row"><i class="fas fa-box-open"></i> Published sql-mcp-server to PyPI</div>
-                        <div class="info-row"><i class="fas fa-heartbeat"></i> Medical Q&A fine-tuned model on HuggingFace Hub</div>
+                        <div class="info-row"><i class="fas fa-heartbeat"></i> Medical Q&amp;A fine-tuned model on HuggingFace Hub</div>
                     </div>
                     <div class="info-block">
                         <h4>Details</h4>
@@ -1146,8 +1282,8 @@
                     </div>
                     <div class="info-block">
                         <h4>Focus Areas</h4>
-                        <div class="info-row"><i class="fas fa-robot"></i> LLM Fine-Tuning & RAG Systems</div>
-                        <div class="info-row"><i class="fas fa-brain"></i> NLP & Deep Learning</div>
+                        <div class="info-row"><i class="fas fa-robot"></i> LLM Fine-Tuning &amp; RAG Systems</div>
+                        <div class="info-row"><i class="fas fa-brain"></i> NLP &amp; Deep Learning</div>
                         <div class="info-row"><i class="fas fa-chart-line"></i> Time Series Analysis</div>
                         <div class="info-row"><i class="fas fa-database"></i> Data Pipeline Engineering</div>
                     </div>
