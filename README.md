@@ -34,7 +34,7 @@ I'm a **Data Scientist / Data Analyst** with a passion for **LLM Fine-Tuning**, 
 **🎯 Currently Working On:**
 - ✨ LLM Fine-tuning with QLoRA / PEFT / TRL
 - 🤖 Building T5-based code documentation generator
-- 🔬 nanoGPT-style small LLM from scratch (in progress)
+- ✅ GPT-2 (124M) from scratch — **[published on Hugging Face](https://hf.co/snehangshu511/tinystories-gpt2-124M-scratch)** | [Live Demo](https://snehangshu511-tinystories-gpt2-demo.hf.space/)
 - 🧩 Multi-agent RAG systems — LangGraph, AutoGen
 
 **🏆 Key Highlights:**
@@ -103,6 +103,17 @@ I'm a **Data Scientist / Data Analyst** with a passion for **LLM Fine-Tuning**, 
 <tr>
 <td width="50%" valign="top">
 
+**[🤖 TinyStories GPT-2 (124M) — Built From Scratch](https://github.com/snehangshu2002/tinystories-gpt2-from-scratch)**
+
+`PyTorch` · `PyTorch Lightning` · `HuggingFace Hub` · `tiktoken`
+
+Full GPT-2 decoder (12L, 12H, 768d) implemented in **raw PyTorch** with zero high-level libs. Trained on 20k TinyStories. Fully HF-compatible via custom `AutoModel` wrapper with `trust_remote_code`. Live demo on HF Spaces.
+
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97_Model-Hub-FFD21E?style=flat-square)](https://hf.co/snehangshu511/tinystories-gpt2-124M-scratch) [![Live Demo](https://img.shields.io/badge/Live%20Demo-Spaces-blue?style=flat-square)](https://snehangshu511-tinystories-gpt2-demo.hf.space/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/tinystories-gpt2-from-scratch)
+
+</td>
+<td width="50%" valign="top">
+
 **[🧬 Medical Q&A LLM Fine-Tuning (TinyLlama + QLoRA)](https://huggingface.co/snehangshu511/MedQA-TinyLlama-QLoRA-v3)**
 
 `TinyLlama-1.1B` · `QLoRA` · `TRL/SFTTrainer` · `HuggingFace Hub`
@@ -112,6 +123,8 @@ Fine-tuned on **5,000 samples** (MedQuad + ChatDoctor) with 4-bit NF4 quantizati
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97_Model-Hub-FFD21E?style=flat-square)](https://huggingface.co/snehangshu511/MedQA-TinyLlama-QLoRA-v3) [![Colab](https://img.shields.io/badge/Colab-Notebook-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1kvrBhXElXRODwva8ntW-qsngi9Tpe_IW?usp=sharing)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[⚙️ Predictive Maintenance — PyTorch + Optuna](https://github.com/snehangshu2002/Predictive-Maintenance-PyTorch)**
