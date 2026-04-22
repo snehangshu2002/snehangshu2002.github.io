@@ -136,8 +136,6 @@ Fine-tuned on **5,000 samples** (MedQuad + ChatDoctor) with 4-bit NF4 quantizati
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/Predictive-Maintenance-PyTorch)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[📈 Stock Price Prediction — LSTM vs GRU](https://github.com/snehangshu2002/stock-lstm-gru)**
@@ -149,6 +147,8 @@ GRU: **R² 0.87, RMSE 0.021** vs LSTM R² 0.84 — with 25% fewer params (115k v
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/stock-lstm-gru)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[🏷️ NER — BiLSTM + Word2Vec](https://github.com/snehangshu2002/NER-BiLSTM-Word2Vec)**
