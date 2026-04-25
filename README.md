@@ -34,6 +34,7 @@ I'm a **Data Scientist / Data Analyst** with a passion for **LLM Fine-Tuning**, 
 **🎯 Currently Working On:**
 - ✨ LLM Fine-tuning with QLoRA / PEFT / TRL
 - 🤖 Building T5-based code documentation generator
+- ✅ GPT-2 Medium Instruct (355M) — **[published on Hugging Face](https://hf.co/snehangshu511/gpt2-medium-instruct)** | [Live Demo](https://snehangshu511-gpt2-medium-instruct-demo.hf.space/)
 - ✅ GPT-2 (124M) from scratch — **[published on Hugging Face](https://hf.co/snehangshu511/tinystories-gpt2-124M-scratch)** | [Live Demo](https://snehangshu511-tinystories-gpt2-demo.hf.space/)
 - 🧩 Multi-agent RAG systems — LangGraph, AutoGen
 
@@ -103,6 +104,17 @@ I'm a **Data Scientist / Data Analyst** with a passion for **LLM Fine-Tuning**, 
 <tr>
 <td width="50%" valign="top">
 
+**[🤖 GPT-2 Medium Instruct (355M) — Fine-Tuned on Alpaca](https://github.com/snehangshu2002/gpt2-instruct-finetune)**
+
+`PyTorch Lightning` · `HuggingFace Hub` · `Gradio`
+
+355M parameter GPT-2 Medium model fine-tuned from scratch on the Alpaca dataset using a custom PyTorch architecture. Deployed as an interactive Gradio app on Hugging Face Spaces.
+
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97_Model-Hub-FFD21E?style=flat-square)](https://huggingface.co/snehangshu511/gpt2-medium-instruct) [![Live Demo](https://img.shields.io/badge/Live%20Demo-Spaces-blue?style=flat-square)](https://snehangshu511-gpt2-medium-instruct-demo.hf.space/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/gpt2-instruct-finetune)
+
+</td>
+<td width="50%" valign="top">
+
 **[🤖 TinyStories GPT-2 (124M) — Built From Scratch](https://github.com/snehangshu2002/tinystories-gpt2-from-scratch)**
 
 `PyTorch` · `PyTorch Lightning` · `HuggingFace Hub` · `tiktoken`
@@ -112,6 +124,8 @@ Full GPT-2 decoder (12L, 12H, 768d) implemented in **raw PyTorch** with zero hig
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97_Model-Hub-FFD21E?style=flat-square)](https://hf.co/snehangshu511/tinystories-gpt2-124M-scratch) [![Live Demo](https://img.shields.io/badge/Live%20Demo-Spaces-blue?style=flat-square)](https://snehangshu511-tinystories-gpt2-demo.hf.space/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/tinystories-gpt2-from-scratch)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[🧬 Medical Q&A LLM Fine-Tuning (TinyLlama + QLoRA)](https://huggingface.co/snehangshu511/MedQA-TinyLlama-QLoRA-v3)**
@@ -123,8 +137,6 @@ Fine-tuned on **5,000 samples** (MedQuad + ChatDoctor) with 4-bit NF4 quantizati
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97_Model-Hub-FFD21E?style=flat-square)](https://huggingface.co/snehangshu511/MedQA-TinyLlama-QLoRA-v3) [![Colab](https://img.shields.io/badge/Colab-Notebook-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1kvrBhXElXRODwva8ntW-qsngi9Tpe_IW?usp=sharing)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[⚙️ Predictive Maintenance — PyTorch + Optuna](https://github.com/snehangshu2002/Predictive-Maintenance-PyTorch)**
@@ -136,6 +148,8 @@ Fine-tuned on **5,000 samples** (MedQuad + ChatDoctor) with 4-bit NF4 quantizati
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/Predictive-Maintenance-PyTorch)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[📈 Stock Price Prediction — LSTM vs GRU](https://github.com/snehangshu2002/stock-lstm-gru)**
@@ -147,8 +161,6 @@ GRU: **R² 0.87, RMSE 0.021** vs LSTM R² 0.84 — with 25% fewer params (115k v
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/snehangshu2002/stock-lstm-gru)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[🏷️ NER — BiLSTM + Word2Vec](https://github.com/snehangshu2002/NER-BiLSTM-Word2Vec)**
