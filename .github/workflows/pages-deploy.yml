@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        # Adjust if your build command or output directory differs
+
+      - name: Verify build output
+        run: |
+          echo "Build output listing:"
+          ls -la ./build || ls -la ./dist || ls -la ./public
+          # Confirm which folder contains the static site. Replace `./build` below as needed.
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
